@@ -3,7 +3,9 @@ const app = express();
 const port = 8001;
 const cors = require("cors")
 
-//const authenticateToken = require('./middlewere/requireAuth')
+const authenticateToken = require('./middlewere/requireAuth')
+const authenticateAdmin = require('./middlewere/isAdmin')
+
 
 
 
@@ -12,11 +14,16 @@ const cors = require("cors")
 app.use(express.json())
 app.use(cors())
 
+const authController = require("./Auth/authController.js")
+app.use("/auth", authController)
+
+const cinemaController = require("./Cinema/cinemaController.js")
+app.use("/cinema", authenticateToken,cinemaController)
 
 const userController = require("./User/userController.js")
-app.use("/auth", userController)
+app.use("/user", authenticateToken,authenticateAdmin,userController)
 
-//app.use(authenticateToken.requireAuth)
+
 
 
 
