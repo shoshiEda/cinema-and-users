@@ -1,0 +1,48 @@
+10.8.2024, 14:01:42 - ERROR - There was an error to logged in:TypeError: Cannot destructure property 'token' of '(intermediate value)' as it is undefined. 
+10.8.2024, 14:02:06 - ERROR - There was an error to logged in:TypeError: Cannot destructure property 'token' of '(intermediate value)' as it is undefined. 
+10.8.2024, 14:07:05 - ERROR - There was an error to logged in:TypeError: Cannot destructure property 'token' of '(intermediate value)' as it is undefined. 
+10.8.2024, 14:09:08 - ERROR - There was an error to logged in:TypeError: Cannot destructure property 'token' of '(intermediate value)' as it is undefined. 
+10.8.2024, 14:10:50 - ERROR - There was an error to logged in:TypeError: Cannot destructure property 'token' of '(intermediate value)' as it is undefined. 
+10.8.2024, 14:13:19 - ERROR - There was an error to logged in:TypeError: Cannot destructure property 'token' of '(intermediate value)' as it is undefined. 
+10.8.2024, 14:14:39 - ERROR - There was an error to logged in:TypeError: Cannot destructure property 'token' of '(intermediate value)' as it is undefined. 
+10.8.2024, 14:15:41 - ERROR - There was an error to logged in:TypeError: Cannot destructure property 'token' of '(intermediate value)' as it is undefined. 
+10.8.2024, 14:17:46 - ERROR - There was an error to logged in:TypeError: Cannot destructure property 'token' of '(intermediate value)' as it is undefined. 
+10.8.2024, 14:22:01 - ERROR - There was an error to logged in:TypeError: Cannot destructure property 'token' of '(intermediate value)' as it is undefined. 
+10.8.2024, 14:26:20 - ERROR - There was an error to logged in:TypeError: Cannot destructure property 'token' of '(intermediate value)' as it is undefined. 
+10.8.2024, 14:27:25 - ERROR - There was an error to logged in:TypeError: Cannot destructure property 'token' of '(intermediate value)' as it is undefined. 
+10.8.2024, 14:28:06 - ERROR - There was an error to logged in:TypeError: Cannot destructure property 'token' of '(intermediate value)' as it is undefined. 
+10.8.2024, 14:29:57 - ERROR - There was an error to logged in:TypeError: Cannot destructure property 'token' of '(intermediate value)' as it is undefined. 
+10.8.2024, 14:31:37 - ERROR - There was an error to logged in:TypeError: Cannot destructure property 'token' of '(intermediate value)' as it is undefined. 
+10.8.2024, 14:34:15 - ERROR - There was an error to logged in:TypeError: Cannot destructure property 'token' of '(intermediate value)' as it is undefined. 
+10.8.2024, 14:37:34 - ERROR - There was an error to logged in:TypeError: Cannot destructure property 'token' of '(intermediate value)' as it is undefined. 
+10.8.2024, 14:38:28 - ERROR - There was an error to logged in:TypeError: Cannot destructure property 'token' of '(intermediate value)' as it is undefined. 
+10.8.2024, 14:38:53 - ERROR - There was an error to logged in:TypeError: Cannot destructure property 'token' of '(intermediate value)' as it is undefined. 
+10.8.2024, 14:40:05 - ERROR - There was an error to logged in:TypeError: Cannot destructure property 'token' of '(intermediate value)' as it is undefined. 
+10.8.2024, 14:42:39 - ERROR - There was an error to logged in:TypeError: Cannot destructure property 'token' of '(intermediate value)' as it is undefined. 
+10.8.2024, 14:45:48 - INFO - user:admin - successfully logged in 
+10.8.2024, 14:47:00 - ERROR - There was an error to logged in:TypeError: Cannot destructure property 'token' of '(intermediate value)' as it is undefined. 
+10.8.2024, 14:48:43 - ERROR - There was an error to logged in:TypeError: Cannot destructure property 'token' of '(intermediate value)' as it is undefined. 
+10.8.2024, 14:49:20 - ERROR - There was an error to logged in:TypeError: Cannot destructure property 'token' of '(intermediate value)' as it is undefined. 
+10.8.2024, 14:50:14 - ERROR - There was an error to logged in:TypeError: Cannot destructure property 'token' of '(intermediate value)' as it is undefined. 
+10.8.2024, 14:51:10 - INFO - user:admin - successfully logged in 
+10.8.2024, 15:04:24 - ERROR - There was an error to logged in:TypeError: Cannot destructure property 'token' of '(intermediate value)' as it is undefined. 
+10.8.2024, 15:04:58 - ERROR - There was an error to logged in:ReferenceError: username is not defined 
+10.8.2024, 15:05:49 - ERROR - There was an error to logged in:ReferenceError: username is not defined 
+10.8.2024, 15:07:14 - ERROR - There was an error to logged in:ReferenceError: username is not defined 
+10.8.2024, 15:11:03 - ERROR - There was an error to logged in:ReferenceError: username is not defined 
+10.8.2024, 15:18:27 - ERROR - There was an error to sign up:ReferenceError: username is not defined 
+10.8.2024, 15:19:01 - INFO - user:shoshana - successfully signed up 
+10.8.2024, 16:28:57 - INFO - user:yacov - successfully signed up 
+10.8.2024, 16:29:04 - INFO - user:yacov - successfully signed up 
+10.8.2024, 16:30:18 - INFO - user:yacov - successfully signed up 
+10.8.2024, 16:31:14 - ERROR - There was an error to sign up:TypeError: Cannot destructure property 'token' of '(intermediate value)' as it is undefined. 
+10.8.2024, 16:32:55 - ERROR - There was an error to sign up:TypeError: Cannot destructure property 'token' of '(intermediate value)' as it is undefined. 
+10.8.2024, 16:34:56 - ERROR - There was an error to sign up:TypeError: Cannot destructure property 'token' of '(intermediate value)' as it is undefined. 
+10.8.2024, 16:38:34 - ERROR - There was an error to sign up:TypeError: Cannot destructure property 'token' of '(intermediate value)' as it is undefined. 
+10.8.2024, 16:40:47 - ERROR - There was an error to sign up:TypeError: Cannot read properties of undefined (reading 'token') 
+10.8.2024, 16:44:00 - ERROR - There was an error to sign up:Error: username already taken 
+10.8.2024, 16:46:07 - ERROR - There was an error to sign up:Error: username already taken 
+10.8.2024, 16:46:42 - INFO - user:yacov1 - successfully signed up 
+10.8.2024, 16:46:46 - ERROR - There was an error to sign up:Error: username already taken 
+10.8.2024, 16:48:00 - ERROR - There was an error to sign up:Error: username already taken 
+10.8.2024, 16:48:43 - ERROR - There was an error to sign up:Error: username already taken 
