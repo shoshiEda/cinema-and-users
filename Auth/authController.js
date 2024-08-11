@@ -11,32 +11,40 @@ router.post("/login", async (req,res) => {
     
     if (!username || !password) return res.status(401).send({error: "username and password are required"})
     try{
-        const {token} = await authService.login(username,password)
+        const response = await authService.login(username,password)
+        if (response.token) {
         log.info(`user:${username} - successfully logged in`)
-        res.cookie('loginToken',token)
+        res.cookie('loginToken',token, { httpOnly: true, secure: false, sameSite: 'None' })
         res.json({success: true})
+        }else{
+            res.status(401).send({ error: response.error });
+            log.error(`There was an error to logged in:${response.error}`)
+        }
     }
     catch (err) {
         log.error(`There was an error to logged in:${err}`)
-        res.status(500).send({ err: 'Failed to login' })
+        res.status(500).send({ error: "An internal server error occurred" });
     }
 })
 
 router.post("/signup", async (req,res) => {
         try{
-        const data = req.body  
-        if (!data.username || !data.password) return res.status(401).send({error: "username and password are required"})
-
-        const sighupData = await authService.signup(data)
+        const {user} = req.body 
+        if (!user.username || !user.password) return res.status(401).send({error: "username and password are required"})
+        const sighupData = await authService.signup(user)
         if(sighupData.token){
-            log.info(`user:${data.username} - successfully signed up`)
+            log.info(`user:${user.username} - successfully signed up`)
             res.cookie('loginToken',sighupData.token)
             res.json({success: true})
+        }
+        else{
+            res.status(401).send({ error: sighupData.error });
+            log.error(`There was an error to logged in:${sighupData.error}`)
         }
     }
     catch (err) {
         log.error(`There was an error to sign up:${err}`)
-        res.status(500).send({ error: `Failed to signup:${err}` })
+        res.status(500).send({ err})
     }
 })
 

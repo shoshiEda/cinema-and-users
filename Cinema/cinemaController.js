@@ -3,7 +3,7 @@ const router = express.Router()
 const cinemaService = require("./cinemaService.js")
 const checkPermission = require("../middlewere/checkPermission")
 
-router.get("/movies",checkPermission("View Movies"), async (req, res) => {
+router.get("/movies",()=>checkPermission("View Movies"), async (req, res) => {
     try{
     const movies = await cinemaService.getAllMovies()
     return res.json(movies)
@@ -13,7 +13,7 @@ router.get("/movies",checkPermission("View Movies"), async (req, res) => {
 }
 })
 
-router.get("/members", checkPermission("View Subscriptions"),async (req, res) => {
+router.get("/members", ()=>checkPermission("View Subscriptions"),async (req, res) => {
     try{
     const members = await cinemaService.getAllMembers()
     return res.json(members)
@@ -24,7 +24,7 @@ router.get("/members", checkPermission("View Subscriptions"),async (req, res) =>
 })
 
 
-router.get("/movies/:id",checkPermission("View Movies"), async (req, res) => {
+router.get("/movies/:id",()=>checkPermission("View Movies"), async (req, res) => {
     try{
     const id = req.params.id 
     const movie = await cinemaService.getMovieById(id)
@@ -35,7 +35,7 @@ router.get("/movies/:id",checkPermission("View Movies"), async (req, res) => {
 }
 })
 
-router.get("/members/:id",checkPermission("View Subscriptions"), async (req, res) => {
+router.get("/members/:id",()=>checkPermission("View Subscriptions"), async (req, res) => {
     try{
     const id = req.params.id 
     const member = await cinemaService.getMemberById(id)
@@ -47,7 +47,7 @@ router.get("/members/:id",checkPermission("View Subscriptions"), async (req, res
 })
 
 
-router.post("/movies/", checkPermission("Create Movies"),async (req, res) => {
+router.post("/movies/", ()=>checkPermission("Create Movies"),async (req, res) => {
     try{
     const newData = req.body
     const status = await cinemaService.createMovie(newData)
@@ -58,7 +58,7 @@ router.post("/movies/", checkPermission("Create Movies"),async (req, res) => {
 }
 })
 
-router.post("/members/",checkPermission("Create Subscriptions"), async (req, res) => {
+router.post("/members/",()=>checkPermission("Create Subscriptions"), async (req, res) => {
     try{
     const newData = req.body
     const status = await cinemaService.createMember( newData)
@@ -70,7 +70,7 @@ router.post("/members/",checkPermission("Create Subscriptions"), async (req, res
 })
 
 
-router.put("/movies/:id", checkPermission("Create Movies"), async (req, res) => {
+router.put("/movies/:id", ()=>checkPermission("Create Movies"), async (req, res) => {
     try{
     const id = req.params.id
     const newData = req.body
@@ -82,7 +82,7 @@ router.put("/movies/:id", checkPermission("Create Movies"), async (req, res) => 
 }
 })
 
-router.put("/members/:id", checkPermission("Create Subscriptions"), async (req, res) => {
+router.put("/members/:id", ()=>checkPermission("Create Subscriptions"), async (req, res) => {
     try{
     const id = req.params.id
     const newData = req.body
@@ -95,7 +95,7 @@ router.put("/members/:id", checkPermission("Create Subscriptions"), async (req, 
 })
 
 
-router.delete("/movies/:id", checkPermission("Delete Movies"), async (req, res) => {
+router.delete("/movies/:id", ()=>checkPermission("Delete Movies"), async (req, res) => {
     try{
     const id = req.params.id
     const status = await cinemaService.deleteMovie(id)
@@ -106,7 +106,7 @@ router.delete("/movies/:id", checkPermission("Delete Movies"), async (req, res) 
 }
 })
 
-router.delete("/members/:id", checkPermission("Delete Subscriptions"), async (req, res) => {
+router.delete("/members/:id", ()=>checkPermission("Delete Subscriptions"), async (req, res) => {
     try{
     const id = req.params.id
     const status = await cinemaService.deleteMember(id)

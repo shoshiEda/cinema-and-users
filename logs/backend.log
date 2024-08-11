@@ -49,3 +49,27 @@
 10.8.2024, 17:00:18 - ERROR - There was an error to sign up:Error: username already taken 
 10.8.2024, 17:12:53 - INFO - user:yacov12 - successfully signed up 
 10.8.2024, 17:13:03 - INFO - user:yacov12 - successfully logged in 
+11.8.2024, 16:32:12 - INFO - user:admin - successfully logged in 
+11.8.2024, 16:33:11 - INFO - user:admin - successfully logged in 
+11.8.2024, 16:33:38 - INFO - user:admin - successfully logged in 
+11.8.2024, 16:38:44 - INFO - user:admin - successfully logged in 
+11.8.2024, 16:51:19 - INFO - user:admin - successfully logged in 
+11.8.2024, 16:58:38 - INFO - user:admin - successfully logged in 
+11.8.2024, 16:59:45 - INFO - user:admin - successfully logged in 
+11.8.2024, 17:03:08 - INFO - user:admin - successfully logged in 
+11.8.2024, 17:03:37 - INFO - user:admin - successfully logged in 
+11.8.2024, 17:13:02 - ERROR - There was an error to logged in:Error: username or password are incorrect 
+11.8.2024, 17:15:45 - ERROR - There was an error to logged in:Error: username or password are incorrect 
+11.8.2024, 17:17:40 - ERROR - There was an error to logged in:Error: username or password are incorrect 
+11.8.2024, 17:18:44 - ERROR - There was an error to logged in:Error: username or password are incorrect 
+11.8.2024, 17:18:59 - ERROR - There was an error to logged in:Error: username or password are incorrect 
+11.8.2024, 17:29:05 - ERROR - There was an error to logged in:Error: username or password are incorrect 
+11.8.2024, 17:29:49 - ERROR - There was an error to logged in:Error: username or password are incorrect 
+11.8.2024, 17:30:22 - ERROR - There was an error to logged in:Error: username or password are incorrect 
+11.8.2024, 20:28:30 - ERROR - There was an error to logged in:Invalid username or password 
+11.8.2024, 20:40:30 - ERROR - There was an error to logged in:Invalid username or password 
+11.8.2024, 20:44:05 - ERROR - There was an error to logged in:Invalid username or password 
+11.8.2024, 20:56:56 - ERROR - There was an error to sign up:ReferenceError: data is not defined 
+11.8.2024, 20:57:40 - ERROR - There was an error to sign up:ReferenceError: response is not defined 
+11.8.2024, 20:58:25 - ERROR - There was an error to logged in:username already exist 
+11.8.2024, 20:58:36 - INFO - user:dfdffff - successfully signed up 

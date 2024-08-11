@@ -8,7 +8,8 @@ const userSchema = new mongoose.Schema({
     sessionTimeOut: Number,
     createdDate:  Date,
     permissions:[String],
-    passwordHash:String
+    passwordHash:String,
+    isAdmin:Boolean
 })
 
 module.exports = mongoose.model("users", userSchema)

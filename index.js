@@ -12,8 +12,11 @@ const authenticateAdmin = require('./middlewere/isAdmin')
  require("./configs/database.js")
 
 app.use(express.json())
-app.use(cors())
-
+app.use(cors({
+    origin: 'http://localhost:5173',
+    credentials: true
+  }));
+  
 const authController = require("./Auth/authController.js")
 app.use("/auth", authController)
 

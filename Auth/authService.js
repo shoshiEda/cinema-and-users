@@ -14,7 +14,8 @@ const admin = {
     sessionTimeOut: 300,
     createdDate:  Date.now(),
     permissions:["View Subscriptions","Create Subscriptions","Delete Subscriptions","View Movies","Create Movies","Delete Movies"],
-    passwordHash:""
+    passwordHash:"",
+    isAdmin:true
 }
 
 const login = async (username, password) =>{
@@ -44,14 +45,14 @@ const login = async (username, password) =>{
     }
     else{
         const user = users.find(user=>user.userName===username)
-        if(!user) throw new Error("username or password are incorrect")
+        if(!user) return{token:null,error: "Invalid username or password"}
         else{
             const isPasswordCorrect = await bcrypt.compare(password, user.passwordHash)
             if(isPasswordCorrect){
                 const { password, ...userWithoutPassword } = user
                 selectedUser = {...userWithoutPassword._doc}
             }
-            else throw new Error("username or password are incorrect")
+            else return{token:null,error: "Invalid username or password"}
     }
 }
     const token =  jwt.sign({userName:selectedUser.userName,sessionTimeOut:selectedUser.sessionTimeOut,permissions:selectedUser.permissions}, secret)
@@ -66,7 +67,7 @@ const signup = async (newData) =>{
 
         const userNames = await userModel.find({}).select('userName')
         const user = userNames.find(userName => userName.userName===newData.username)
-        if(user) throw new Error ('username already taken')
+        if(user) return{token:null,error: "username already exist"}
 
         const newUser = {
             userName:newData.username,
@@ -75,7 +76,8 @@ const signup = async (newData) =>{
             sessionTimeOut: newData.sessionTimeOut || 30,
             createdDate:  Date.now(),
             permissions:newData.permissions || [],
-            passwordHash:""
+            passwordHash:"",
+            isAdmin:false
         }
 
         const hashedPassword = await bcrypt.hash(newData.password, saltRounds)
