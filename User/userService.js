@@ -26,8 +26,8 @@ const getById = async(id)=>{
 
 const updateUser = async(id, newData)=>{
     try{
-    await userModel.findByIdAndUpdate(id, newData)
-    return "Updated"
+    const updatedUser = await userModel.findByIdAndUpdate(id, newData)
+    return updatedUser
 } catch (error) {
     console.error("Error in user service:", error)
     throw new Error("Service unavailable")

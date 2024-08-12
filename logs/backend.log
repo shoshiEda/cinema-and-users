@@ -73,3 +73,58 @@
 11.8.2024, 20:57:40 - ERROR - There was an error to sign up:ReferenceError: response is not defined 
 11.8.2024, 20:58:25 - ERROR - There was an error to logged in:username already exist 
 11.8.2024, 20:58:36 - INFO - user:dfdffff - successfully signed up 
+12.8.2024, 13:14:38 - INFO - user:admin - successfully logged in 
+12.8.2024, 13:14:39 - ERROR - There was an error to logged in:ReferenceError: token is not defined 
+12.8.2024, 13:22:32 - INFO - user:admin - successfully logged in 
+12.8.2024, 13:22:32 - ERROR - There was an error to logged in:ReferenceError: token is not defined 
+12.8.2024, 13:30:07 - INFO - user:admin - successfully logged in 
+12.8.2024, 13:30:07 - ERROR - There was an error to logged in:ReferenceError: token is not defined 
+12.8.2024, 13:31:17 - INFO - user:admin - successfully logged in 
+12.8.2024, 13:31:17 - ERROR - There was an error to logged in:ReferenceError: token is not defined 
+12.8.2024, 13:31:30 - INFO - user:admin - successfully logged in 
+12.8.2024, 13:31:30 - ERROR - There was an error to logged in:ReferenceError: token is not defined 
+12.8.2024, 13:32:47 - INFO - user:admin - successfully logged in 
+12.8.2024, 13:38:21 - INFO - user:admin - successfully logged in 
+12.8.2024, 13:38:55 - INFO - user:admin - successfully logged in 
+12.8.2024, 13:42:03 - INFO - user:admin - successfully logged in 
+12.8.2024, 13:43:52 - INFO - user:admin - successfully logged in 
+12.8.2024, 13:44:47 - ERROR - There was an error to logged in:Invalid username or password 
+12.8.2024, 13:47:59 - ERROR - There was an error to logged in:Invalid username or password 
+12.8.2024, 13:48:08 - INFO - user:admin - successfully logged in 
+12.8.2024, 13:49:51 - INFO - user:admin - successfully logged in 
+12.8.2024, 13:50:11 - INFO - user:admin - successfully logged in 
+12.8.2024, 13:53:55 - INFO - user:admin - successfully logged in 
+12.8.2024, 13:55:38 - INFO - user:admin - successfully logged in 
+12.8.2024, 13:59:16 - INFO - user:admine - successfully signed up 
+12.8.2024, 14:02:45 - ERROR - There was an error to logged in:username already exist 
+12.8.2024, 14:02:51 - INFO - user:adminet - successfully signed up 
+12.8.2024, 14:03:37 - INFO - user:adminetr - successfully signed up 
+12.8.2024, 14:14:32 - INFO - user:dfsdsf - successfully signed up 
+12.8.2024, 14:15:01 - INFO - user:dfsdsfr - successfully signed up 
+12.8.2024, 14:47:16 - INFO - user:admin - successfully logged in 
+12.8.2024, 14:51:38 - INFO - user:admin - successfully logged in 
+12.8.2024, 14:51:54 - INFO - user:admin - successfully logged in 
+12.8.2024, 14:53:41 - INFO - user:admin - successfully logged in 
+12.8.2024, 14:54:27 - INFO - user:admin - successfully logged in 
+12.8.2024, 14:55:55 - INFO - user:admin - successfully logged in 
+12.8.2024, 14:56:39 - INFO - user:admin - successfully logged in 
+12.8.2024, 15:01:20 - INFO - user:dsds - successfully signed up 
+12.8.2024, 15:18:28 - INFO - user:admin - successfully logged in 
+12.8.2024, 15:19:38 - INFO - user:admin - successfully logged in 
+12.8.2024, 15:20:38 - INFO - user:admin - successfully logged in 
+12.8.2024, 15:29:13 - INFO - user:admin - successfully logged in 
+12.8.2024, 15:30:16 - INFO - user:admin - successfully logged in 
+12.8.2024, 15:30:42 - INFO - user:admin - successfully logged in 
+12.8.2024, 15:34:53 - INFO - user:admin - successfully logged in 
+12.8.2024, 15:59:36 - INFO - user:admin - successfully logged in 
+12.8.2024, 16:13:40 - INFO - user:admin - successfully logged in 
+12.8.2024, 16:16:59 - INFO - user:admin - successfully logged in 
+12.8.2024, 16:20:58 - INFO - user:admin - successfully logged in 
+12.8.2024, 16:33:04 - INFO - user:admin - successfully logged in 
+12.8.2024, 17:41:08 - INFO - user:admin - successfully logged in 
+12.8.2024, 19:55:38 - INFO - user:admin - successfully logged in 
+12.8.2024, 20:05:26 - INFO - user:Shosh - successfully signed up 
+12.8.2024, 20:05:49 - INFO - user:admin - successfully logged in 
+12.8.2024, 20:09:59 - INFO - user:admin - successfully logged in 
+12.8.2024, 20:13:12 - INFO - user:admin - successfully logged in 
+12.8.2024, 20:19:11 - INFO - user:admin - successfully logged in 
