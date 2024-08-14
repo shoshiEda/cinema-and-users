@@ -18,7 +18,8 @@ router.post("/login", async (req,res) => {
             {
                 httpOnly: true, 
                 secure: false,   
-                sameSite: 'None', 
+                sameSite: 'None',
+                maxAge: 24 * 60 * 60 * 1000 
               })
         res.json({success: true,token:response.token})
         }else{
@@ -46,6 +47,7 @@ router.post("/signup", async (req,res) => {
                     httpOnly: true, 
                     secure: false,   
                     sameSite: 'None', 
+                    maxAge: 24 * 60 * 60 * 1000
                   })
             res.json({success: true,token:signupData.token})
         }

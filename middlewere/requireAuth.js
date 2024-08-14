@@ -3,6 +3,7 @@ const secret = process.env.SECRET1 || 'Secret';
 
 const authenticateToken = (req, res, next) => {
     
+    console.log(req.cookies)
 
     const token = req.cookies.loginToken
 
