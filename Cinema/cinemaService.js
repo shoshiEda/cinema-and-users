@@ -2,8 +2,15 @@ const axios = require("axios")
 
 const url = 'http://127.0.0.1:8000'
 
-const getAllMovies =async()=>{
-    const resp =await axios.get(url+'/movies')
+const getAllMovies =async(search,pageIdx,limitPerPage,searchByGenre)=>{
+    const params = new URLSearchParams({
+        search,
+        page: pageIdx,
+        limitPerPage,
+        searchByGenre
+    })
+    const urlWithParams = `${url}/movies?${params.toString()}`
+    const resp =await axios.get(urlWithParams)
     return resp.data
 }
 

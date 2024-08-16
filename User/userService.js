@@ -1,11 +1,26 @@
 const userModel = require("./userModel")
 
 
-const getAllUsers = async()=>{
+const getAllUsers = async(search,pageIdx,limitPerPage)=>{
     try{
-        const users = await userModel.find({}).lean()
+
+        const allUsers = await userModel.countDocuments({})
+        const lastPage = allUsers%limitPerPage? Math.floor(allUsers/limitPerPage)+1 : Math.floor(allUsers/limitPerPage)
+        const isLastPage = lastPage===pageIdx+1? true : false
+        const skip = pageIdx * limitPerPage;
+
+        const users = await userModel.find({
+            $or: [
+                { userName: { $regex: search, $options: "i" } }, 
+                { firstName: { $regex: search, $options: "i" } },
+                { lastName: { $regex: search, $options: "i" } }
+            ]
+        })
+        .skip(skip)
+        .limit(limitPerPage) 
+        .lean()        
         const fixedUsers = users.map(({ passwordHash, __v, ...rest }) => rest)
-        return fixedUsers
+        return {fixedUsers,isLastPage}
     
 } catch (error) {
     console.error("Error in user service:", error)

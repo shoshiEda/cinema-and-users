@@ -4,7 +4,11 @@ const userService = require("./userService.js")
 
 router.get("/", async (req, res) => {
     try{
-    const users = await userService.getAllUsers()
+    const search = req.query.search || ''
+    const pageIdx = parseInt(req.query.page, 10) || 0
+    const limitPerPage = parseInt(req.query.limitPerPage, 10) || 6
+    
+    const users = await userService.getAllUsers(search,pageIdx,limitPerPage)
     return res.json(users)
 } catch (error) {
     console.error("Error fetching users:", error);
