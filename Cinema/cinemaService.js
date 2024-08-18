@@ -14,8 +14,19 @@ const getAllMovies =async(search,pageIdx,limitPerPage,searchByGenre)=>{
     return resp.data
 }
 
-const getAllMembers =async()=>{
-    const resp =await axios.get(url+'/members')
+const getAllMembers =async(search,pageIdx,limitPerPage)=>{
+    const params = new URLSearchParams({
+        search,
+        page: pageIdx,
+        limitPerPage
+    })
+    const urlWithParams = `${url}/members?${params.toString()}`
+    const resp =await axios.get(urlWithParams)
+    return resp.data
+}
+
+const getAllMovieNames = async()=>{
+    const resp =await axios.get(url+`/movies/all`)
     return resp.data
 }
 
@@ -59,4 +70,9 @@ const deleteMember = async(id)=>{
     return resp.data
 }
 
-module.exports = {getAllMovies,getAllMembers,getMovieById,getMemberById,createMovie,createMember,updateMovie,updateMember,deleteMovie,deleteMember}
+const addSubscription = async(data)=>{
+    const resp =await axios.post(url+`/subscriptions`,data)
+    return resp.data
+}
+
+module.exports = {getAllMovies,getAllMembers,getAllMovieNames,getMovieById,getMemberById,createMovie,createMember,updateMovie,updateMember,deleteMovie,deleteMember,addSubscription}

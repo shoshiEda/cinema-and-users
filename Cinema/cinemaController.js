@@ -17,9 +17,22 @@ router.get("/movies",checkPermission("View Movies"), async (req, res) => {
 }
 })
 
+router.get("/movies/all",checkPermission("View Movies"), async (req, res) => {
+    try{
+    const data = await cinemaService.getAllMovieNames()
+    return res.json(data)
+} catch (error) {
+    console.error("Error fetching movies:", error);
+    res.status(500).json({ message: "Internal Server Error" });
+}
+})
+
 router.get("/members", checkPermission("View Subscriptions"),async (req, res) => {
     try{
-    const members = await cinemaService.getAllMembers()
+        const search = req.query.search || ''
+        const pageIdx = parseInt(req.query.page, 10) || 0
+        const limitPerPage = parseInt(req.query.limitPerPage, 10) || 10
+    const members = await cinemaService.getAllMembers(search,pageIdx,limitPerPage)
     return res.json(members)
 } catch (error) {
     console.error("Error fetching members:", error);
@@ -74,7 +87,7 @@ router.post("/members/",checkPermission("Create Subscriptions"), async (req, res
 })
 
 
-router.put("/movies/:id", checkPermission("Create Movies"), async (req, res) => {
+router.put("/movies/:id", checkPermission("Update Movies"), async (req, res) => {
     try{
     const id = req.params.id
     const newData = req.body
@@ -86,7 +99,7 @@ router.put("/movies/:id", checkPermission("Create Movies"), async (req, res) => 
 }
 })
 
-router.put("/members/:id", checkPermission("Create Subscriptions"), async (req, res) => {
+router.put("/members/:id", checkPermission("Update Subscription"), async (req, res) => {
     try{
     const id = req.params.id
     const newData = req.body
@@ -117,6 +130,17 @@ router.delete("/members/:id", checkPermission("Delete Subscriptions"), async (re
     return res.json({ status })
 } catch (error) {
     console.error("Error deleting user:", error);
+    res.status(500).json({ message: "Internal Server Error" });
+}
+})
+
+router.post("/subscriptions",checkPermission("Update Subscription"), async (req, res) => {
+    try{
+    const newData = req.body 
+    const data = await cinemaService.addSubscription(newData)
+    return res.json(data)
+} catch (error) {
+    console.error("Error fetching movies:", error);
     res.status(500).json({ message: "Internal Server Error" });
 }
 })
