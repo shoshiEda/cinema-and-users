@@ -14,13 +14,6 @@ router.post("/login", async (req,res) => {
         const response = await authService.login(username,password)
         if (response.token) {
         log.info(`user:${username} - successfully logged in`)
-        res.cookie('loginToken',response.token,
-            {
-                httpOnly: true, 
-                secure: false,   
-                sameSite: 'None',
-                maxAge: 24 * 60 * 60 * 1000 
-              })
         res.json({success: true,token:response.token})
         }else{
             res.json({success: false,error:response.error})
@@ -42,13 +35,6 @@ router.post("/signup", async (req,res) => {
     console.log('signupData:',signupData)
         if(signupData.token){
             log.info(`user:${user.username} - successfully signed up`)
-            res.cookie('loginToken',signupData.token,
-                {
-                    httpOnly: true, 
-                    secure: false,   
-                    sameSite: 'None', 
-                    maxAge: 24 * 60 * 60 * 1000
-                  })
             res.json({success: true,token:signupData.token})
         }
         else{
